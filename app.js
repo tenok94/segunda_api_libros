@@ -12,7 +12,7 @@ app.use(librosRoutes); //usa la ruta de los libros
 // })
 
 // Conectar a la base de datos
-dbconetedition().then(() => {
+dbconnect().then(() => {
     app.listen(3000, () => {
         console.log("Server corriendo en el puerto 3000");
     });

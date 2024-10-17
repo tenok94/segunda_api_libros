@@ -9,6 +9,22 @@ const libroSchema = new mongoose.Schema(   // Schema = esquema
             type: String,
             required: true
         },
+        categoria: {
+            type: String,
+            required: true
+        },
+        estado: {
+            type: String,
+            enum: ["Disponible", "Prestado", "Vencido"],  // enum = enumerador
+            default: "Disponible",
+        },
+        fechaPrestamo: {
+            type: Date,
+        },
+        fehcaDevolucion: {
+            type: Date,
+        },
+
     },// configuraciones adicionales
     {
         timestamps: true, //Fecha de cracion y modificacion como columna
