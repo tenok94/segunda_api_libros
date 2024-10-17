@@ -16,7 +16,7 @@ const libroSchema = new mongoose.Schema(   // Schema = esquema
         estado: {
             type: String,
             enum: ["Disponible", "Prestado", "Vencido"],  // enum = enumerador
-            default: "Disponible",
+            default: "Disponible"
         },
         fechaPrestamo: {
             type: Date,
