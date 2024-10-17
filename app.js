@@ -1,15 +1,15 @@
 const express = require("express");
 const app = express();
 const dbconnect = require("./config/db.js"); // importa la base de datos
+const librosRoutes = require("./routes/libros") // importa la ruta de los libros
 
 app.use(express.json()); //middleware para interpretar JSON
-const router = express.Router();
-app.use(router);
+app.use(librosRoutes); //usa la ruta de los libros
 
-// ruta de prueba
-router.get("/", (req, res,) => { 
-    res.send("hola mundo!");
-})
+// // ruta de prueba
+// router.get("/", (req, res,) => { 
+//     res.send("hola mundo!");
+// })
 
 // Conectar a la base de datos
 dbconetedition().then(() => {

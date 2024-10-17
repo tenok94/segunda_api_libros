@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const ModelLibro = require('../models/libromodel'); // Importar el modelo de libros
 
+
 // Obtener todos los libros (GET)
 router.get('/libros', async (req, res) => {
     try {
